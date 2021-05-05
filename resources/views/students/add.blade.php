@@ -16,7 +16,7 @@
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         <label class="control-label">Name</label>
-                                        <input type="text" name="name" class="form-control" placeholder="Name"
+                                        <input type="text" name="name" class="form-control  @error('name') is-invalid @enderror" placeholder="Name"
                                             value="{{ old('name') }}" required>
                                         @if ($errors->has('name'))
                                             <span class="text-danger"> {{ $errors->first('name') }} </span>
@@ -25,7 +25,7 @@
 
                                     <div class="form-group col-md-6">
                                         <label class="control-label">Date Of Birth</label>
-                                        <input type="date" name="date_of_birth" class="form-control" placeholder="Name"
+                                        <input type="date" name="date_of_birth" class="form-control  @error('date_of_birth') is-invalid @enderror" placeholder="Name"
                                             value="{{ old('date_of_birth') }}" required>
 
                                         @if ($errors->has('date_of_birth'))
@@ -34,7 +34,7 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label class="control-label">Photo</label>
-                                        <input type="file" name="photo" class="form-control" value="{{ old('photo') }}"
+                                        <input type="file" name="photo" class="form-control  @error('photo') is-invalid @enderror" value="{{ old('photo') }}"
                                             required>
 
                                             @if ($errors->has('photo'))
@@ -43,7 +43,7 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label class="control-label">Grade</label>
-                                        <input type="text" name="grade" class="form-control" placeholder="Grade"
+                                        <input type="text" name="grade" class="form-control  @error('grade') is-invalid @enderror" placeholder="Grade"
                                             value="{{ old('grade') }}" required>
 
                                         @if ($errors->has('grade'))
@@ -54,7 +54,7 @@
                                    
                                     <div class="form-group col-md-6">
                                         <label class="control-label">Country</label>
-                                        <select class="form-control" id="country" name="country" required>
+                                        <select class="form-control  @error('country') is-invalid @enderror" id="country" name="country" required>
                                             <option value="">Select Country</option>
                                             @foreach ($countries as $item)
                                                 <option value="{{ $item }}">{{ $item }}</option>
@@ -67,7 +67,7 @@
 
                                     <div class="form-group col-md-6">
                                         <label class="control-label">City</label>
-                                        <input type="text" name="city" class="form-control" placeholder="City"
+                                        <input type="text" name="city" class="form-control  @error('city') is-invalid @enderror" placeholder="City"
                                             value="{{ old('city') }}" required>
 
                                         @if ($errors->has('city'))
@@ -76,7 +76,7 @@
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label class="control-label">Address</label>
-                                        <textarea name="address" class="form-control"
+                                        <textarea name="address" class="form-control  @error('address') is-invalid @enderror"
                                             rows="5">{{ old('address') }}</textarea>
 
                                         @if ($errors->has('address'))
