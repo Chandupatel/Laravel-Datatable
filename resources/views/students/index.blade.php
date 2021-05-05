@@ -16,7 +16,7 @@
                             <h3 class="panel-title">Basic Table</h3>
                         </div>
                         <div class="panel-body">
-                            <table class="table yajra-datatable">
+                            <table class="table students-datatable">
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -45,7 +45,7 @@
     <script type="text/javascript">
         $(function() {
 
-            var table = $('.yajra-datatable').DataTable({
+            var table = $('.students-datatable').DataTable({
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('student.list') }}",
