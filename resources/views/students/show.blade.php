@@ -37,6 +37,13 @@
                                         <th>Address</th>
                                         <td>{{$student->address}}</td>
                                     </tr>
+
+                                    <tr>
+                                        <th>Image</th>
+                                        <td>
+                                            <img src="{{asset('storage/image/'.$student->photo)}}" alt="photo" width="100px;" height="100px;">
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

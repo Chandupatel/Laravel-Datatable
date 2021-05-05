@@ -28,8 +28,6 @@
 <body>
     <!-- WRAPPER -->
     <div id="wrapper">
-
-
         <!-- NAVBAR -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="brand">
